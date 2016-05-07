@@ -14,6 +14,45 @@ ul {
   display: none;
 }
 
+#pageTitle {
+  font-size: 60px;
+  display: inline;
+  font-weight: 900;
+}
+
+#pageTitle>span {
+  font-weight: 300;
+}
+
+nav {
+  display: inline;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: red;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+p, li, a {
+  color: gray;
+}
+
+#ericImg {
+  width: 50px;
+}
+
+.selected {
+  text-decoration: underline;
+  color: red;
+}
+
 /* twitter bootstrap fluid row styles */
 
 .wrapper {
