@@ -1,12 +1,16 @@
 html,body {
   height: 100%;
-  margin: 0;
+  margin: 0 2%;
   padding: 5px;
   font-family: helvetica;
 }
 
-p, li, a {
-  color: gray;
+h1, h2, h3, p, li, a {
+  color: #797979;
+}
+
+a {
+  text-decoration: none;
 }
 
 a:hover {
@@ -14,9 +18,7 @@ a:hover {
   cursor: pointer;
 }
 
-a:visited {
-  text-decoration: none;
-}
+
 
 /* style for nav */
 
@@ -24,7 +26,7 @@ a:visited {
     width: 100px;
     display: block;
     margin: 20px auto;
-    border: 2px solid red;
+    border: 1px solid red;
     border-radius: 500px;
     -webkit-border-radius: 500px;
     -moz-border-radius: 500px;
@@ -34,7 +36,8 @@ a:visited {
   font-size: 60px;
   display: block;
   text-align: center;
-  font-weight: 900;
+  font-weight: 300;
+  color: #797979;
 }
 
 
@@ -63,6 +66,11 @@ li, #projects img {
 .fullWidthImages {
   max-width: 100%;
   min-width: 100%;
+  -webkit-filter: grayscale(100%);
+}
+
+.fullWidthImages:hover {
+  -webkit-filter: none;
 }
 
 .projectName {
@@ -70,16 +78,13 @@ li, #projects img {
 }
 
 .projectDate {
-  font-size: 1.3em;
+  font-size: 1.0em;
 }
 
 .projectLink {
   font-size: 1.2em;
 }
 
-.projectLink a {
-  text-decoration: none;
-}
 
 h2 {
   font-size: 1.8em;
@@ -109,7 +114,6 @@ p, .projectDescription, li>a {
 
 .nav a, .stickyNav a {
   font-size: 0.9em;
-  text-decoration: none;
   display: inline-block;
   margin-right: 15px;
 }
@@ -122,7 +126,6 @@ p, .projectDescription, li>a {
 
 .selected {
   color: red;
-  font-weight: bold;
 }
 
 .stickyNav {
@@ -133,7 +136,7 @@ p, .projectDescription, li>a {
   z-index: 100;
   border-top: 0;
   border-bottom-style: solid;
-  border-bottom-color: gray;
+  border-bottom-color: #797979;
   border-bottom-width: 1px;
 }
 
@@ -143,7 +146,7 @@ p, .projectDescription, li>a {
 }
 
 .stickyNav hr {
-  border-color: gray;
+  border-color: #797979;
   border-top: 0;
   border-left: 0;
   border-right: 0;
@@ -151,6 +154,12 @@ p, .projectDescription, li>a {
   max-width: 100%;
   margin: 0;
   display: none;
+}
+
+footer p {
+  text-align: center;
+  font-size: 0.7em;
+  margin: 20px auto;
 }
 
 
@@ -266,18 +275,41 @@ p, .projectDescription, li>a {
     margin: 0 auto;
   }
 
+  .navContainer {
+    height: 102px;
+  }
+
   #ericImg {
     display: block;;
     float: left;
-    width: 8%;
+    width: 80px;
+    margin: 10px auto;
+  }
+
+  .stickyNav a, .nav a {
+    font-size: 0.9em;
+    font-weight: 300;
   }
 
 
   #pageTitle {
-    display: block;
+    font-size: 1.7em;
+    margin-top: -0.05em;
+    margin-left: 10px;
     float: left;
-    margin-left: 2%;
-    margin-top: 40px;
+    line-height: 102px;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+
+  h3 {
+    font-size: 1.4em;
+  }
+
+  p, .projectDescription, li>a {
+    font-size: 1.0em;
   }
 
   .nav  {
@@ -290,29 +322,14 @@ p, .projectDescription, li>a {
   }
 
   .projectDate {
-    font-size: 1.3em;
+    font-size: 0.9em;
   }
 
   .projectLink {
-    font-size: 1.2em;
+    font-size: 0.8em;
   }
 
-  .stickyNav a, .nav a {
-    font-size: 0.9em;
-    font-weight: 300;
-  }
 
-  h2 {
-    font-size: 1.8em;
-  }
-
-  h3 {
-    font-size: 1.4em;
-  }
-
-  p, .projectDescription, li>a {
-    font-size: 1.1em;
-  }
 
 
 

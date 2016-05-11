@@ -1,5 +1,4 @@
 $('document').ready(function () {
-  console.log('lab.js loads');
 
 	// hide projects at initial page load
   $('section').not('#about').hide();
@@ -18,11 +17,11 @@ $('document').ready(function () {
     var $newProject = $('.prototype').clone();
     $newProject.find('#title').html(this.title);
     $newProject.find('#date').html(this.date);
-    $newProject.find('#link a.attr("href")').html(this.link);
-    $newProject.find('#link a').html(this.link);
+    $newProject.find('#link a').attr('href',this.link);
+    // $newProject.find('#link a').html(this.link);
     $newProject.find('#description').html(this.description);
     // TODO get this working
-    $newProject.find('#projectImage.attr("src")').html(this.image);
+    $newProject.find('#projectImage').attr('src',this.image);
 
     $newProject.removeClass('prototype');
     return $newProject;
@@ -30,13 +29,10 @@ $('document').ready(function () {
 
   projectData.forEach(function(projectData){
     projects.push(new Project(projectData));
-    console.log(projectData);
-    console.log('push project to array');
   });
 
   projects.forEach(function(project){
     $('#projects').append(project.toHtml());
-    console.log('append project');
   });
 
 	//sticky nav
@@ -46,7 +42,6 @@ $('document').ready(function () {
     var scrollTop = $(window).scrollTop();
     if (scrollTop > topOfNav) {
       $('nav').addClass('stickyNav').removeClass('nav');
-      console.log('start sticky');
     } else {
       $('nav').removeClass('stickyNav').addClass('nav');
     }
@@ -63,7 +58,6 @@ $('document').ready(function () {
 
   $('nav a').on('click', function() {
     $tabClicked = $(this).data('tab');
-    console.log('clicked ' + $tabClicked);
     $(this).addClass('selected').siblings().removeClass('selected');
     $('section').hide();
     $('#' + $tabClicked).show();
